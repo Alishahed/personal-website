@@ -1,0 +1,487 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%; /* Adjusted for fluid width */
+    margin: auto;
+    overflow: hidden;
+}
+
+.main-header {
+    background: #333;
+    height: 110px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-nav {
+    text-align: center;
+    color: #5b97f1;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.main-nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #f5f5f8;
+    margin-bottom: 10px;
+}
+
+.main-nav a:hover {
+    color: #0077B5;
+}
+
+
+.bio-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    float: left; /* Floats the image to the left */
+    margin-right: 20px; /* Adds spacing between the image and the text */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    border-radius: 100%; /* Keeps the image round */
+    border: 3px solid rgb(240, 242, 105); /* Keeps the image round */
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row; /* Aligns items in a row */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align the links vertically */
+}
+
+.social-links img {
+    display: flex;
+    flex-direction: row; /* Aligns items in a row */
+    width: 43px; /* Adjust as needed */
+    height: 43px; /* Adjust as needed */
+    justify-content: center; /* Center the links horizontally */
+    align-items: center; /* Align the links vertically */
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px; /* Adds spacing between the icons */
+    color: #0a0a0a;
+    font-size: 48px; /* Adjust the size of the icons as needed */
+}
+
+.social-links a:last-child {
+    margin-right: 0; /* Removes margin from the last icon */
+}
+
+/*.social-links a:hover {
+    color: #0077B5; /* Example hover color, adjust as needed */
+/*}*/
+
+
+.name-title {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #fff; /* White font color */
+    margin-bottom: 20px; /* Space between name and navigation menu */
+    cursor: pointer;
+}
+
+.short-name, .full-name {
+    transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.full-name {
+    display: none; /* Hide the full name initially */
+    opacity: 0;
+}
+
+.name-title:hover .short-name {
+    display: none; /* Hide the short name on hover */
+    opacity: 0;
+}
+
+.name-title:hover .full-name {
+    display: inline; /* Show the full name on hover */
+    opacity: 1;
+}
+
+.biography {
+    margin-top: 0px; /* Adjust space above the biography */
+    margin-left: 20px;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.biography h2 {
+    margin-bottom: 10px;
+}
+
+.biography p, .biography ul {
+    margin-bottom: 10px;
+}
+
+.biography li {
+    line-height: 1.6;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/*a:hover {
+    color: red;
+}*/
+
+
+.blog-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts spacing between cards */
+    width:100%
+    /* Other styles (if needed) */
+}
+
+
+.article-card {
+    width: calc(50% - 10px); /* Adjusts width, accounting for margins */
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    /* Optional: Add a horizontal margin if needed */
+    margin-right: 10px;
+    max-height: 450px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures content that exceeds the max height is hidden */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-card p {
+    font-size: 14px; /* Adjust summary font size as needed */
+    color: #666; /* Optional: different color for summary */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines after which text will be cut off */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px; /* Adjust based on your font size and line-height */
+}
+
+
+
+/* Clear the right margin for every second card */
+.article-card:nth-of-type(2n) {
+    margin-right: 0;
+    /*margin-top: 20px;*/
+}
+
+.article-card:nth-of-type(2) {
+    margin-right: 0;
+    margin-top: 20px;
+}
+
+.article-card:first-of-type {
+    margin-top: 20px; /* Adjust the space as needed */
+}
+
+.article-card a {
+    text-decoration: none; /* Optional: removes the underline from links */
+    color: inherit; /* To keep the text color consistent */
+}
+
+.article-card img {
+    display: block;
+    width: 300px; /* Adjust the thumbnail size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: auto; /* Space between image and text */
+    margin-left: auto; /* Space between image and text */
+}
+
+.article-card h3 {
+    font-size: 18px; /* Adjust title font size as needed */
+    margin-bottom: 5px; /* Space between title and summary */
+}
+
+.article-card-main:first-of-type {
+    margin-top: 20px; /* Adjust the space as needed */
+}
+.article-card-main {
+    display: flex;
+    margin-bottom: 20px; /* Space between cards */
+    border: 1px solid #cccccc; /* Adds a light grey border */
+    padding: 20px; /* Space inside the border */
+    border-radius: 10px; /* Optional: rounded corners */
+    /* Other styling for the card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-card-main img {
+    width:200px; /* Adjust the thumbnail size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.projects-card {
+    width: calc(50% - 10px); /* Adjusts width, accounting for margins */
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    /* Optional: Add a horizontal margin if needed */
+    margin-right: 10px;
+    max-height: 450px; /* Adjust this value as needed */
+    overflow: hidden; /* Ensures content that exceeds the max height is hidden */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projects-card p {
+    font-size: 14px; /* Adjust summary font size as needed */
+    color: #666; /* Optional: different color for summary */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines after which text will be cut off */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px; /* Adjust based on your font size and line-height */
+}
+
+/* Clear the right margin for every second card */
+.projects-card:nth-of-type(2n) {
+    margin-right: 0;
+    /*margin-top: 20px;*/
+}
+
+.projects-card:nth-of-type(2) {
+    margin-right: 0;
+    margin-top: 20px;
+}
+
+.projects-card:first-of-type {
+    margin-top: 20px; /* Adjust the space as needed */
+}
+
+.projects-card a {
+    text-decoration: none; /* Optional: removes the underline from links */
+    color: inherit; /* To keep the text color consistent */
+}
+
+.projects-card img {
+    display: block;
+    width: 300px; /* Adjust the thumbnail size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: auto; /* Space between image and text */
+    margin-left: auto; /* Space between image and text */
+}
+
+.projects-card h3 {
+    font-size: 18px; /* Adjust title font size as needed */
+    margin-bottom: 5px; /* Space between title and summary */
+}
+
+.projects-banner {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center the text */
+    padding: 5px 0; /* Add some padding above and below the text */
+    margin-top: 0px; /* Add some space above the banner */
+}
+
+.github-btn {
+    display: inline-block;
+    background-color: #e6dddd; /* GitHub color */
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.github-btn:hover {
+    background-color: #969292; /* Slightly lighter color on hover */
+}
+
+.github-btn i {
+    margin-right: 5px;
+}
+
+.resume-button {
+    display: inline-block;
+    background-color: #333; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    margin-top: 20px; /* Space above the button */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.resume-button:hover {
+    background-color: #333; /* Darker green on hover */
+}
+
+.resume-button i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.label {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 3px;
+    font-size: 0.8em;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.data-science {
+    background-color: rgb(0, 85, 255);
+}
+
+.machine-learning {
+    background-color: rgb(255, 123, 0);
+}
+
+.nlp {
+    background-color: rgb(35, 165, 48);
+}
+
+.llm {
+    background-color: rgb(165, 35, 156);
+}
+
+.data-viz {
+    background-color: rgb(49, 72, 8); 
+}
+
+.poc {
+    background-color: rgb(210, 57, 10); 
+}
+
+.misc{
+    background-color: rgb(20, 6, 2); 
+}
+/* Add other topics with their respective colors */
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .main-header {
+        background: #333;
+        height: 90px;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .profile-image {
+        float: left; /* Floats the image to the left */
+        margin-right: 20px; /* Adds spacing between the image and the text */
+        width: 75px; /* Adjust width as needed */
+        height: 85px; /* Adjust height as needed */
+        border-radius: 100%; /* Keeps the image round */
+    }
+    .nav-list {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .biography, .article-card h3, .article-card p ,.main-nav,.projects-card h3,.projects-card p,.github-btn,.label {
+        font-size: smaller;
+    }
+
+    .name-title{
+        font-size:30px ;
+
+    }
+    .article-card {
+        width: 100% ;/*calc(50% - 10px); /* Adjusts width, accounting for margins */
+        margin-bottom: 20px;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+    
+        /* Optional: Add a horizontal margin if needed */
+        margin-right: 10px;
+        max-height: 400px; /* Adjust this value as needed */
+        overflow: hidden; /* Ensures content that exceeds the max height is hidden */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* Adjust the layout for article cards */
+    .article-card-main {
+        display: flex;
+        margin-bottom: 20px; /* Space between cards */
+        border: 1px solid #cccccc; /* Adds a light grey border */
+        padding: 20px; /* Space inside the border */
+        border-radius: 10px; /* Optional: rounded corners */
+        /* Other styling for the card */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .article-card img {
+        width: 250px; /* Adjust the thumbnail size as needed */
+        height: auto; /* Maintain aspect ratio */
+        /*margin-right: 15px; /* Space between image and text */
+        margin-right: auto; /* Space between image and text */
+        margin-left: auto; /* Space between image and text */
+    }
+    .projects-card {
+        width: 100%; /*calc(50% - 10px); /* Adjusts width, accounting for margins */
+        margin-bottom: 20px;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+    
+        /* Optional: Add a horizontal margin if needed */
+        margin-right: 10px;
+        max-height: 400px; /* Adjust this value as needed */
+        overflow: hidden; /* Ensures content that exceeds the max height is hidden */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .projects-card img {
+        width: 250px; /* Adjust the thumbnail size as needed */
+        height: auto; /* Maintain aspect ratio */
+        /*margin-right: 15px; /* Space between image and text */
+        margin-right: auto; /* Space between image and text */
+        margin-left: auto; /* Space between image and text */
+    }
+    /* Adjust the profile image for smaller screens */
+    /*.profile-image {
+        width: 120px; /* Smaller width */
+    /*    height: 140px; /* Smaller height */
+    /*}*/
+    .cv-container {
+        display: none;
+    }
+    .main-nav a:nth-of-type(4) {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+   
+}
