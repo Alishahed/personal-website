@@ -228,9 +228,8 @@ a {
 
 .article-card-main img {
     width:200px; /* Adjust the thumbnail size as needed */
-    height: 150; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     margin-right: 15px; /* Space between image and text */
-    object-fit: cover;
 }
 
 .projects-card {
@@ -444,14 +443,12 @@ a {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
     .article-card img {
-        width: 200px; /* Adjust the thumbnail size as needed */
-        height: 200px; /* Maintain aspect ratio */
+        width: 250px; /* Adjust the thumbnail size as needed */
+        height: auto; /* Maintain aspect ratio */
         /*margin-right: 15px; /* Space between image and text */
         margin-right: auto; /* Space between image and text */
         margin-left: auto; /* Space between image and text */
-        object-fit: cover;
     }
-   
     
     .projects-card {
         width: 100%; /*calc(50% - 10px); /* Adjusts width, accounting for margins */
