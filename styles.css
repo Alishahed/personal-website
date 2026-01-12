@@ -1,8 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #2c3e50;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -13,29 +15,49 @@ body {
 }
 
 .main-header {
-    background: #333;
-    height: 110px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 110px;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
     text-align: center;
-    color: #5b97f1;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 16px;
 }
 
 .main-nav a {
     margin: 0 20px;
     text-decoration: none;
-    color: #f5f5f8;
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .main-nav a:hover {
-    color: #0077B5;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 
 
@@ -48,52 +70,64 @@ body {
 }
 
 .profile-image {
-    float: left; /* Floats the image to the left */
-    margin-right: 20px; /* Adds spacing between the image and the text */
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-    border-radius: 100%; /* Keeps the image round */
-    border: 3px solid rgb(240, 242, 105); /* Keeps the image round */
+    float: left;
+    margin-right: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .social-links {
     display: flex;
-    flex-direction: row; /* Aligns items in a row */
-    justify-content: center; /* Center the links horizontally */
-    align-items: center; /* Align the links vertically */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
 }
 
 .social-links img {
-    display: flex;
-    flex-direction: row; /* Aligns items in a row */
-    width: 43px; /* Adjust as needed */
-    height: 43px; /* Adjust as needed */
-    justify-content: center; /* Center the links horizontally */
-    align-items: center; /* Align the links vertically */
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
 }
 
 .social-links a {
-    display: inline-block;
-    margin-right: 15px; /* Adds spacing between the icons */
-    color: #0a0a0a;
-    font-size: 48px; /* Adjust the size of the icons as needed */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    font-size: 32px;
+    transition: all 0.3s ease;
 }
 
-.social-links a:last-child {
-    margin-right: 0; /* Removes margin from the last icon */
+.social-links a:hover {
+    color: #764ba2;
+    transform: translateY(-3px);
 }
-
-/*.social-links a:hover {
-    color: #0077B5; /* Example hover color, adjust as needed */
-/*}*/
 
 
 .name-title {
-    font-size: 36px; /* Adjust the size as needed */
-    font-weight: bold;
-    color: #fff; /* White font color */
-    margin-bottom: 20px; /* Space between name and navigation menu */
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 0;
     cursor: pointer;
+    letter-spacing: 0.5px;
 }
 
 .short-name, .full-name {
@@ -116,31 +150,44 @@ body {
 }
 
 .biography {
-    margin-top: 0px; /* Adjust space above the biography */
+    margin-top: 0;
     margin-left: 20px;
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 17px;
+    line-height: 1.8;
+    color: #34495e;
 }
 
 .biography h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 .biography p, .biography ul {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .biography li {
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 a {
-    color: blue;
-    text-decoration: underline;
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/*a:hover {
-    color: red;
-}*/
+a:hover {
+    color: #764ba2;
+}
+
+.biography a {
+    text-decoration: underline;
+    text-decoration-color: rgba(102, 126, 234, 0.3);
+}
+
+.biography a:hover {
+    text-decoration-color: #764ba2;
+}
 
 
 .blog-content {
@@ -153,29 +200,36 @@ a {
 
 
 .article-card {
-    width: calc(50% - 10px); /* Adjusts width, accounting for margins */
+    width: calc(50% - 10px);
     margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    padding: 10px;
-    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+    border-radius: 12px;
     box-sizing: border-box;
-
-    /* Optional: Add a horizontal margin if needed */
     margin-right: 10px;
-    max-height: 450px; /* Adjust this value as needed */
-    overflow: hidden; /* Ensures content that exceeds the max height is hidden */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 450px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.article-card:hover {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-5px);
+    border-color: #667eea;
 }
 
 .article-card p {
-    font-size: 14px; /* Adjust summary font size as needed */
-    color: #666; /* Optional: different color for summary */
+    font-size: 15px;
+    color: #5a6c7d;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Number of lines after which text will be cut off */
-    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 100px; /* Adjust based on your font size and line-height */
+    max-height: 100px;
+    line-height: 1.6;
 }
 
 
@@ -202,15 +256,19 @@ a {
 
 .article-card img {
     display: block;
-    width: 300px; /* Adjust the thumbnail size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: auto; /* Space between image and text */
-    margin-left: auto; /* Space between image and text */
+    width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 8px;
 }
 
 .article-card h3 {
-    font-size: 18px; /* Adjust title font size as needed */
-    margin-bottom: 5px; /* Space between title and summary */
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .article-card-main:first-of-type {
@@ -218,12 +276,12 @@ a {
 }
 .article-card-main {
     display: flex;
-    margin-bottom: 20px; /* Space between cards */
-    border: 1px solid #cccccc; /* Adds a light grey border */
-    padding: 20px; /* Space inside the border */
-    border-radius: 10px; /* Optional: rounded corners */
-    /* Other styling for the card */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid #e8e8e8;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
 }
 
 .article-card-main img {
@@ -233,29 +291,36 @@ a {
 }
 
 .projects-card {
-    width: calc(50% - 10px); /* Adjusts width, accounting for margins */
+    width: calc(50% - 10px);
     margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    padding: 10px;
-    border-radius: 5px;
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+    border-radius: 12px;
     box-sizing: border-box;
-
-    /* Optional: Add a horizontal margin if needed */
     margin-right: 10px;
-    max-height: 450px; /* Adjust this value as needed */
-    overflow: hidden; /* Ensures content that exceeds the max height is hidden */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 450px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.projects-card:hover {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-5px);
+    border-color: #667eea;
 }
 
 .projects-card p {
-    font-size: 14px; /* Adjust summary font size as needed */
-    color: #666; /* Optional: different color for summary */
+    font-size: 15px;
+    color: #5a6c7d;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Number of lines after which text will be cut off */
-    -webkit-box-orient: vertical;  
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 100px; /* Adjust based on your font size and line-height */
+    max-height: 100px;
+    line-height: 1.6;
 }
 
 /* Clear the right margin for every second card */
@@ -280,73 +345,96 @@ a {
 
 .projects-card img {
     display: block;
-    width: 300px; /* Adjust the thumbnail size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: auto; /* Space between image and text */
-    margin-left: auto; /* Space between image and text */
+    width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 8px;
 }
 
 .projects-card h3 {
-    font-size: 18px; /* Adjust title font size as needed */
-    margin-bottom: 5px; /* Space between title and summary */
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .projects-banner {
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333; /* Dark text color */
-    text-align: center; /* Center the text */
-    padding: 5px 0; /* Add some padding above and below the text */
-    margin-top: 0px; /* Add some space above the banner */
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.projects-banner h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .github-btn {
     display: inline-block;
-    background-color: #e6dddd; /* GitHub color */
+    background-color: #667eea;
     color: white;
-    padding: 5px 10px;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 12px;
+    margin-right: 8px;
+    border-radius: 6px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .github-btn:hover {
-    background-color: #969292; /* Slightly lighter color on hover */
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    color: white;
 }
 
 .github-btn i {
-    margin-right: 5px;
+    margin-right: 6px;
 }
 
 .resume-button {
     display: inline-block;
-    background-color: #333; /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px;
-    margin-top: 20px; /* Space above the button */
+    background-color: #667eea;
+    color: white;
+    padding: 12px 24px;
+    margin-top: 20px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .resume-button:hover {
-    background-color: #333; /* Darker green on hover */
+    background-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+    color: white;
 }
 
 .resume-button i {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 8px;
 }
 
 .label {
     display: inline-block;
-    padding: 3px 5px;
-    margin: 3px;
-    font-size: 0.8em;
-    border-radius: 5px;
+    padding: 5px 12px;
+    margin: 4px;
+    font-size: 12px;
+    border-radius: 20px;
     color: white;
-    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
 .data-science {
@@ -385,19 +473,21 @@ a {
     }
 
     .main-header {
-        background: #333;
-        height: 90px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 90px;
         color: #fff;
         text-align: center;
         padding: 20px 0;
     }
     
     .profile-image {
-        float: left; /* Floats the image to the left */
-        margin-right: 20px; /* Adds spacing between the image and the text */
-        width: 75px; /* Adjust width as needed */
-        height: 85px; /* Adjust height as needed */
-        border-radius: 100%; /* Keeps the image round */
+        float: left;
+        margin-right: 20px;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 3px solid #667eea;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     }
     .nav-list {
         display: block;
@@ -419,28 +509,25 @@ a {
 
     }
     .article-card {
-        width: 100% ;/*calc(50% - 10px); /* Adjusts width, accounting for margins */
+        width: 100%;
         margin-bottom: 20px;
-        border: 1px solid #cccccc;
-        padding: 10px;
-        border-radius: 5px;
+        border: 1px solid #e8e8e8;
+        padding: 20px;
+        border-radius: 12px;
         box-sizing: border-box;
-    
-        /* Optional: Add a horizontal margin if needed */
         margin-right: 10px;
-        max-height: 400px; /* Adjust this value as needed */
-        overflow: hidden; /* Ensures content that exceeds the max height is hidden */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 400px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     /* Adjust the layout for article cards */
     .article-card-main {
         display: flex;
-        margin-bottom: 20px; /* Space between cards */
-        border: 1px solid #cccccc; /* Adds a light grey border */
-        padding: 20px; /* Space inside the border */
-        border-radius: 10px; /* Optional: rounded corners */
-        /* Other styling for the card */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        border: 1px solid #e8e8e8;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     .article-card img {
         width: 250px; /* Adjust the thumbnail size as needed */
@@ -450,18 +537,16 @@ a {
         margin-left: auto; /* Space between image and text */
     }
     .projects-card {
-        width: 100%; /*calc(50% - 10px); /* Adjusts width, accounting for margins */
+        width: 100%;
         margin-bottom: 20px;
-        border: 1px solid #cccccc;
-        padding: 10px;
-        border-radius: 5px;
+        border: 1px solid #e8e8e8;
+        padding: 20px;
+        border-radius: 12px;
         box-sizing: border-box;
-    
-        /* Optional: Add a horizontal margin if needed */
         margin-right: 10px;
-        max-height: 400px; /* Adjust this value as needed */
-        overflow: hidden; /* Ensures content that exceeds the max height is hidden */
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 400px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     .projects-card img {
         width: 250px; /* Adjust the thumbnail size as needed */
