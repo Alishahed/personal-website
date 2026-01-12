@@ -2,60 +2,132 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alishahed's Portfolio - Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Shahed - Machine Learning Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <h1 class="name-title">
-                <span class="short-name">Ali Shahed</span>
-                <span class="full-name">Ali Shahed hagh ghadam</span>
-            </h1>
-            
-            <nav class="main-nav">
-                <a href="index.html">About me</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html">Writings</a>
-                <a href="cv.html">Resumé</a>
-            </nav>
-        </header>
-        <div class="projects-banner">
-            <h2>About Me</h2>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-first">Ali</span>
+                <span class="logo-last">Shahed</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Writing</a></li>
+                <li><a href="cv.html" class="nav-link">Resume</a></li>
+            </ul>
         </div>
-        <div class="article-card-main">
-            <div id="bio" class="bio-section">
-                    <img src="images/IMG_0445.jpeg" alt="Ali Shahed" class="profile-image" />
-                <div class="biography">
-                    <p> I am a seasoned Machine Learning Engineer with a <a href ="https://trepo.tuni.fi/bitstream/handle/10024/114663/shahed.pdf?sequence=1&isAllowed=y" target="_blank">Ph.D. in Electrical Engineering</a>
-                        and over 7 years of business experience in the design, implementation, and deployment of 
-                        various Machine Learning (ML) models on cloud platforms. My main areas of expertise are Natural Language Processing (NLP), 
-                        Large Language Models (LLM) and Deep Learning (DL).
-                    </p>
-                    <a href="documents/cv.pdf" class="resume-button" download>
-                        <i class="fa fa-download"></i> Resumé
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>Machine Learning Engineer</span>
+                </div>
+                <h1 class="hero-title">
+                    Building intelligent systems that <span class="gradient-text">understand</span> and <span class="gradient-text">learn</span>
+                </h1>
+                <p class="hero-description">
+                    Ph.D. in Electrical Engineering with 7+ years of experience in designing and deploying ML models.
+                    Specializing in NLP, LLMs, and Deep Learning.
+                </p>
+                <div class="hero-buttons">
+                    <a href="documents/cv.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i>
+                        Download Resume
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <i class="fas fa-user"></i>
+                        Learn More
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ali-shahed-hagh-ghadam/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/alishahed" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://medium.com/@ali.shahed" target="_blank" class="social-link" aria-label="Medium">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=IRUfxvwAAAAJ&hl=en" target="_blank" class="social-link" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
                     </a>
                 </div>
             </div>
-    </div>
-    <div class="social-links">
-        <a href="https://www.linkedin.com/in/ali-shahed-hagh-ghadam/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/alishahed" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://medium.com/@ali.shahed" target="_blank">
-            <i class="fab fa-medium"></i>
-        </a>
-        <a href="https://scholar.google.com/citations?user=IRUfxvwAAAAJ&hl=en" target="_blank">
-            <img src="images/google_scholar.png" alt="Google Scholar">
-        </a>
-    </div>  
-    </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="images/IMG_0445.jpeg" alt="Ali Shahed" class="profile-img">
+                    <div class="image-backdrop"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        I am a seasoned Machine Learning Engineer with a <a href="https://trepo.tuni.fi/bitstream/handle/10024/114663/shahed.pdf?sequence=1&isAllowed=y" target="_blank" class="text-link">Ph.D. in Electrical Engineering</a>
+                        and over 7 years of business experience in the design, implementation, and deployment of various Machine Learning (ML) models on cloud platforms.
+                    </p>
+                    <p class="about-paragraph">
+                        My main areas of expertise are Natural Language Processing (NLP), Large Language Models (LLM), and Deep Learning (DL).
+                        I'm passionate about building intelligent systems that solve real-world problems and push the boundaries of what's possible with AI.
+                    </p>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>Deep Learning</h3>
+                            <p>Neural networks and advanced architectures</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3>NLP & LLMs</h3>
+                            <p>Natural language understanding and generation</p>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Cloud Deployment</h3>
+                            <p>Scalable ML systems in production</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2026 Ali Shahed. Built with passion for innovation.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
-
-

@@ -2,43 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ali Shahed's Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Ali Shahed</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <h1 class="name-title">
-                <span class="short-name">Ali Shahed</span>
-                <span class="full-name">Ali Shahed hagh ghadam</span>
-            </h1>
-            <nav class="main-nav">
-                <a href="index.html">About me</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html">Writings</a>
-                <a href="cv.html">Resumé</a>
-            </nav>
-        </header>
-        <div class="cv-container">
-            <!-- Embed PDF -->
-            <object data="documents/cv.pdf" type="application/pdf" width="100%" height="600px">
-                <p>Your browser does not support PDFs. 
-                <a href="documents/cv.pdf">Download the CV</a>.</p>
-            </object>
-            <a href="documents/cv.pdf" class="mobile-pdf-download" style="display:none;">Download CV</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-first">Ali</span>
+                <span class="logo-last">Shahed</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Writing</a></li>
+                <li><a href="cv.html" class="nav-link active">Resume</a></li>
+            </ul>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
-        
-                if (isMobile) {
-                    document.getElementById('desktop-pdf-viewer').style.display = 'none';
-                    document.getElementById('mobile-pdf-download').style.display = 'block';
-                }
-            });
-        </script>
-    </div>
+    </nav>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <span class="section-tag">Experience</span>
+            <h1>Resume</h1>
+            <p>My professional journey and qualifications</p>
+        </div>
+    </section>
+
+    <!-- CV Viewer Section -->
+    <section class="cv-container">
+        <!-- Embed PDF -->
+        <object data="documents/cv.pdf" type="application/pdf" width="100%" height="800px">
+            <div style="text-align: center; padding: 3rem; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                <i class="fas fa-file-pdf" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Your browser does not support PDF viewing.</p>
+                <a href="documents/cv.pdf" class="btn btn-primary" download>
+                    <i class="fa fa-download"></i> Download Resume
+                </a>
+            </div>
+        </object>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                © 2026 Ali Shahed. Built with passion for innovation.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
