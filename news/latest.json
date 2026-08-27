@@ -10,28 +10,28 @@
     },
     {
       "title": "OpenAI's first custom chip \"Jalapeño\" beats Nvidia's Blackwell — and Rubin — in inference benchmarks",
-      "summary": "OpenAI published the first results for its in-house, Broadcom-built inference accelerator, benchmarked at the Hot Chips conference using SemiAnalysis' public InferenceX suite (models tested: GPT-OSS 120B, DeepSeek R1 670B, Kimi K2.5 1T). Headline numbers: **1.5x–1.9x more AI work per watt** at peak…",
+      "summary": "OpenAI published the first results for its in-house, Broadcom-built inference accelerator, benchmarked at the Hot Chips conference using SemiAnalysis' public InferenceX suite (models tested: GPT-OSS 120B, DeepSeek R1 670B, Kimi K2.5 1T). Headline numbers: 1.5x–1.9x more AI work per watt at peak…",
       "source": "OpenAI",
       "url": "https://openai.com/index/jalapeno-first-results",
       "date": "2026-08-26"
     },
     {
       "title": "Z.ai confirmed as the lab behind mysterious \"Ox Alpha\" model",
-      "summary": "The anonymous open-weight model that launched on OpenRouter over the weekend and immediately topped benchmarks has been identified: **Z.ai** (maker of the GLM series), per Bloomberg. Z.ai described Ox Alpha as \"a reasoning model designed for coding, sustained agentic work, and production…",
+      "summary": "The anonymous open-weight model that launched on OpenRouter over the weekend and immediately topped benchmarks has been identified: Z.ai (maker of the GLM series), per Bloomberg. Z.ai described Ox Alpha as \"a reasoning model designed for coding, sustained agentic work, and production workloads,\"…",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026-08-26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
       "date": "2026-08-26"
     },
     {
       "title": "Anthropic heads to IPO: ~$2 trillion valuation, a $30+ trillion TAM pitch",
-      "summary": "Per a Wall Street Journal report (summarized by The Decoder), Anthropic expects to frame its total addressable market at **more than $30 trillion** — counting all the work AI models could theoretically take on, which would exceed SpaceX's claimed $28.5T \"largest actionable TAM in the history of…",
+      "summary": "Per a Wall Street Journal report (summarized by The Decoder), Anthropic expects to frame its total addressable market at more than $30 trillion — counting all the work AI models could theoretically take on, which would exceed SpaceX's claimed $28.5T \"largest actionable TAM in the history of…",
       "source": "The Decoder",
       "url": "https://the-decoder.com/anthropic-sees-a-market-opportunity-of-more-than-30-trillion-ahead-of-its-ipo/",
       "date": "2026-08-26"
     },
     {
       "title": "Meta scraps sweeping AI-layoff plan \"Project OT\" after employee revolt and failing agents",
-      "summary": "Reuters reports (via The Decoder) that Meta internally planned to shrink many teams by **up to 60%**, leaving small \"talent-dense\" human groups to supervise virtual AI workers. CEO Mark Zuckerberg halted the planned November second wave on the evening of May 19 after: (1) the agent technology never…",
+      "summary": "Reuters reports (via The Decoder) that Meta internally planned to shrink many teams by up to 60%, leaving small \"talent-dense\" human groups to supervise virtual AI workers. CEO Mark Zuckerberg halted the planned November second wave on the evening of May 19 after: (1) the agent technology never…",
       "source": "The Decoder / Reuters",
       "url": "https://the-decoder.com/employee-revolt-and-failing-agents-forced-meta-to-scrap-its-ai-layoff-plan/",
       "date": "2026-08-26"
