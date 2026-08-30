@@ -39,14 +39,13 @@ def parse_top_stories(text):
         if not lines:
             continue
         title = re.sub(r"\s+", " ", lines[0])
-        body_lines, link_line = [], None
-        for l in lines[1:]:
-            if link_line is None and l.startswith("-"):
-                link_line = l
-            elif not l.startswith("-"):
-                body_lines.append(l)
-        links = LINK_RE.findall(link_line or "")
+        # standalone source line (old format, e.g. "- [The Verge](https://...)") is
+        # excluded from the summary; newer digests cite sources inline in the body
+        body_lines = [l for l in lines[1:]
+                      if not (l.startswith("-") and LINK_RE.search(l))]
+        links = LINK_RE.findall(chunk)
         summary = " ".join(body_lines)
+        summary = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", summary)  # inline links -> anchor text
         summary = re.sub(r"[*_`]", "", summary)
         summary = re.sub(r"\s+", " ", summary).strip()
         if len(summary) > MAX_SUMMARY:
@@ -88,8 +87,7 @@ def main():
         for it in parse_top_stories(f.read_text(encoding="utf-8")):
             key = re.sub(r"[^a-z0-9]+", "", it["title"].lower())
             it["date"] = d.isoformat()
-            if key not in seen:
-                seen[key] = it
+            seen[key] = it  # window is oldest->newest, so newest occurrence wins
 
     items = sorted(seen.values(), key=lambda x: x["date"], reverse=True)
     items = items[:MAX_STORIES]
