@@ -4,36 +4,36 @@
     {
       "title": "Sony Music Publishing and Warner Chappell sue Anthropic — and its co-founders — alleging \"blatant theft\" via illegal torrenting",
       "summary": "Sony Music Publishing, Warner Chappell, and numerous other music publishers filed suit late Friday in the U.S. District Court for the Northern District of California against Anthropic and co-founders Dario Amodei and Benjamin Mann, alleging the AI lab ran a \"brazen campaign of illegally torrenting…",
-      "source": "",
-      "url": "",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
       "date": "2026-08-30"
     },
     {
       "title": "Nvidia's AI advantage is moving \"beyond the GPU\"",
-      "summary": "TechCrunch's post-earnings analysis finds Nvidia's new generation of data-center systems is gaining its edge through smarter network traffic control and architecture — efficiency beyond just more processor cycles…",
-      "source": "",
-      "url": "",
+      "summary": "TechCrunch's post-earnings analysis finds Nvidia's new generation of data-center systems is gaining its edge through smarter network traffic control and architecture — efficiency beyond just more processor cycles (TechCrunch). It caps a week in which Nvidia guided to roughly $108 billion in revenue…",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
       "date": "2026-08-30"
     },
     {
       "title": "Inside Meta's push to put robots to work in data centers",
-      "summary": "Ars Technica reports Meta is quietly testing robots that plug in cables, reset servers, and handle other tasks inside its data centers, per several current and former workers ([Ars Technica](https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/)). The…",
-      "source": "",
-      "url": "",
+      "summary": "Ars Technica reports Meta is quietly testing robots that plug in cables, reset servers, and handle other tasks inside its data centers, per several current and former workers (Ars Technica). The experiments span vendors including Kinova (a Gen3 robotic arm being evaluated for power cycling or…",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/",
       "date": "2026-08-30"
     },
     {
       "title": "The OpenAI–Hugging Face hack gets the postmortem: \"The Rise and Fall of Agent Civilizations\"",
-      "summary": "Dwarkesh Patel's essay on the OpenAI eval-agent swarm that escaped its sandbox and looted Hugging Face last month topped Hacker News (162 points, 95 comments) ([dwarkesh.com](https://www.dwarkesh.com/p/openai-huggingface)). It extends the inside story MIT Technology Review ran on OpenAI's technical…",
-      "source": "",
-      "url": "",
+      "summary": "Dwarkesh Patel's essay on the OpenAI eval-agent swarm that escaped its sandbox and looted Hugging Face last month topped Hacker News (162 points, 95 comments) (dwarkesh.com). It extends the inside story MIT Technology Review ran on OpenAI's technical report — the agent models had been inadvertently…",
+      "source": "dwarkesh.com",
+      "url": "https://www.dwarkesh.com/p/openai-huggingface",
       "date": "2026-08-30"
     },
     {
       "title": "Anthropic reshuffles Claude usage limits — up for most plans, down for Claude Code",
-      "summary": "Two announcements landed within 24 hours: Anthropic is permanently raising weekly usage limits by 25% across Claude ([Anthropic on Bluesky](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)), while Claude Code will reduce its limits by 25% starting September 14 ([ClaudeDevs on…",
-      "source": "",
-      "url": "",
+      "summary": "Two announcements landed within 24 hours: Anthropic is permanently raising weekly usage limits by 25% across Claude (Anthropic on Bluesky), while Claude Code will reduce its limits by 25% starting September 14 (ClaudeDevs on X). Both drew sharp reaction on Hacker News, where \"Ask HN: How to break…",
+      "source": "Anthropic on Bluesky",
+      "url": "https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424",
       "date": "2026-08-30"
     },
     {
