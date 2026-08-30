@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
-"""Sync the latest AI news digest into the personal website.
+"""Publish the weekly 'Last Week in AI' digest to the personal website.
 
-Reads the newest ai-news-YYYY-MM-DD.md from the digest folder produced by the
-Goose recipe `daily_ai_news_digest`, converts the top stories into
-news/latest.json (the format index.html expects), and commits + pushes to
-GitHub Pages.
+Run manually on Sundays (e.g.: python3 scripts/sync_ai_news.py).
+
+Reads the daily ai-news-YYYY-MM-DD.md files produced by the Goose recipe
+`daily_ai_news_digest`, takes all digests from the 7-day window ending at the
+newest available file, merges their Top Stories (deduped by title, newest
+occurrence wins, newest first), converts them to news/latest.json (the format
+index.html expects), and commits + pushes to GitHub Pages.
 """
 import json
 import re
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 DIGEST_DIR = Path("/Users/alishahed/Documents/ai-news-digests")
 REPO = Path("/Users/alishahed/Projects/alishahed.github.io")
 OUT = REPO / "news" / "latest.json"
 MAX_SUMMARY = 300
+MAX_STORIES = 6
+WINDOW_DAYS = 7  # 7-day window ending at the newest digest
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 
 
@@ -61,23 +66,44 @@ def main():
     files = sorted(DIGEST_DIR.glob("ai-news-*.md"))
     if not files:
         sys.exit("no digest files found")
-    latest = files[-1]
-    text = latest.read_text(encoding="utf-8")
-    m = re.search(r"(\d{4}-\d{2}-\d{2})", latest.name)
-    date = m.group(1) if m else datetime.now().strftime("%Y-%m-%d")
 
-    items = parse_top_stories(text)
+    def file_date(f):
+        m = re.search(r"(\d{4}-\d{2}-\d{2})", f.name)
+        return datetime.strptime(m.group(1), "%Y-%m-%d").date() if m else None
+
+    latest = files[-1]
+    latest_date = file_date(latest) or datetime.now().date()
+    cutoff = latest_date - timedelta(days=WINDOW_DAYS - 1)
+
+    # collect digests in the window, oldest first
+    window = []
+    for f in files:
+        d = file_date(f)
+        if d is not None and cutoff <= d <= latest_date:
+            window.append((d, f))
+
+    # merge top stories, dedupe by normalized title (newest occurrence wins)
+    seen = {}
+    for d, f in window:
+        for it in parse_top_stories(f.read_text(encoding="utf-8")):
+            key = re.sub(r"[^a-z0-9]+", "", it["title"].lower())
+            it["date"] = d.isoformat()
+            if key not in seen:
+                seen[key] = it
+
+    items = sorted(seen.values(), key=lambda x: x["date"], reverse=True)
+    items = items[:MAX_STORIES]
     if not items:
-        sys.exit(f"could not parse top stories from {latest}")
-    for it in items:
-        it["date"] = date
-    payload = {"updated": date, "items": items}
+        sys.exit(f"could not parse top stories from digests in {cutoff}..{latest_date}")
+
+    payload = {"updated": latest_date.isoformat(), "items": items}
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     new_json = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
     changed = not OUT.exists() or OUT.read_text(encoding="utf-8") != new_json
     OUT.write_text(new_json, encoding="utf-8")
-    print(f"Synced {len(items)} stories from {latest.name} -> {OUT.relative_to(REPO)} (changed={changed})")
+    src = ", ".join(f.name for _, f in window)
+    print(f"Week ending {latest_date}: {len(items)} stories from {src} -> {OUT.relative_to(REPO)} (changed={changed})")
     if not changed:
         return
 
@@ -86,7 +112,7 @@ def main():
                        capture_output=True, text=True)
 
     git("add", "news/latest.json")
-    git("commit", "-m", f"Update Daily AI News ({date})")
+    git("commit", "-m", f"Update Last Week in AI (week ending {latest_date.isoformat()})")
     git("push")
     print("Committed and pushed to GitHub.")
 
