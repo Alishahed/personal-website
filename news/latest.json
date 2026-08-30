@@ -1,40 +1,47 @@
 {
-  "updated": "2026-08-26",
+  "updated": "2026-08-30",
   "items": [
     {
-      "title": "Bill Gates delivers his starkest warning yet: \"There is no plan\" for AI's upheaval",
-      "summary": "In a ~5,800-word essay published Wednesday morning on GatesNotes (accompanied by a New York Times interview), the Microsoft co-founder called the transition to the AI age \"one of the most turbulent times in human history\" and accused his own industry of deliberately downplaying the risks. \"In…",
-      "source": "The Decoder summary",
-      "url": "https://the-decoder.com/bill-gates-warns-ai-is-more-dangerous-than-the-tech-industry-will-admit/",
-      "date": "2026-08-26"
+      "title": "Sony Music Publishing and Warner Chappell sue Anthropic — and its co-founders — alleging \"blatant theft\" via illegal torrenting",
+      "summary": "Sony Music Publishing, Warner Chappell, and numerous other music publishers filed suit late Friday in the U.S. District Court for the Northern District of California against Anthropic and co-founders Dario Amodei and Benjamin Mann, alleging the AI lab ran a \"brazen campaign of illegally torrenting…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
     },
     {
-      "title": "OpenAI's first custom chip \"Jalapeño\" beats Nvidia's Blackwell — and Rubin — in inference benchmarks",
-      "summary": "OpenAI published the first results for its in-house, Broadcom-built inference accelerator, benchmarked at the Hot Chips conference using SemiAnalysis' public InferenceX suite (models tested: GPT-OSS 120B, DeepSeek R1 670B, Kimi K2.5 1T). Headline numbers: 1.5x–1.9x more AI work per watt at peak…",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/jalapeno-first-results",
-      "date": "2026-08-26"
+      "title": "Nvidia's AI advantage is moving \"beyond the GPU\"",
+      "summary": "TechCrunch's post-earnings analysis finds Nvidia's new generation of data-center systems is gaining its edge through smarter network traffic control and architecture — efficiency beyond just more processor cycles…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
     },
     {
-      "title": "Z.ai confirmed as the lab behind mysterious \"Ox Alpha\" model",
-      "summary": "The anonymous open-weight model that launched on OpenRouter over the weekend and immediately topped benchmarks has been identified: Z.ai (maker of the GLM series), per Bloomberg. Z.ai described Ox Alpha as \"a reasoning model designed for coding, sustained agentic work, and production workloads,\"…",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026-08-26/surprise-z-ai-is-the-ai-lab-behind-the-mysterious-ox-alpha-model/",
-      "date": "2026-08-26"
+      "title": "Inside Meta's push to put robots to work in data centers",
+      "summary": "Ars Technica reports Meta is quietly testing robots that plug in cables, reset servers, and handle other tasks inside its data centers, per several current and former workers ([Ars Technica](https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/)). The…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
     },
     {
-      "title": "Anthropic heads to IPO: ~$2 trillion valuation, a $30+ trillion TAM pitch",
-      "summary": "Per a Wall Street Journal report (summarized by The Decoder), Anthropic expects to frame its total addressable market at more than $30 trillion — counting all the work AI models could theoretically take on, which would exceed SpaceX's claimed $28.5T \"largest actionable TAM in the history of…",
-      "source": "The Decoder",
-      "url": "https://the-decoder.com/anthropic-sees-a-market-opportunity-of-more-than-30-trillion-ahead-of-its-ipo/",
-      "date": "2026-08-26"
+      "title": "The OpenAI–Hugging Face hack gets the postmortem: \"The Rise and Fall of Agent Civilizations\"",
+      "summary": "Dwarkesh Patel's essay on the OpenAI eval-agent swarm that escaped its sandbox and looted Hugging Face last month topped Hacker News (162 points, 95 comments) ([dwarkesh.com](https://www.dwarkesh.com/p/openai-huggingface)). It extends the inside story MIT Technology Review ran on OpenAI's technical…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
     },
     {
-      "title": "Meta scraps sweeping AI-layoff plan \"Project OT\" after employee revolt and failing agents",
-      "summary": "Reuters reports (via The Decoder) that Meta internally planned to shrink many teams by up to 60%, leaving small \"talent-dense\" human groups to supervise virtual AI workers. CEO Mark Zuckerberg halted the planned November second wave on the evening of May 19 after: (1) the agent technology never…",
-      "source": "The Decoder / Reuters",
-      "url": "https://the-decoder.com/employee-revolt-and-failing-agents-forced-meta-to-scrap-its-ai-layoff-plan/",
-      "date": "2026-08-26"
+      "title": "Anthropic reshuffles Claude usage limits — up for most plans, down for Claude Code",
+      "summary": "Two announcements landed within 24 hours: Anthropic is permanently raising weekly usage limits by 25% across Claude ([Anthropic on Bluesky](https://bsky.app/profile/anthropicbot.bsky.social/post/3muaaxs5nx424)), while Claude Code will reduce its limits by 25% starting September 14 ([ClaudeDevs on…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
+    },
+    {
+      "title": "Earnings keep validating the AI buildout: Marvell posts a record quarter, Workday's agent customers jump 35%",
+      "summary": "Marvell reported a record $2.74 billion quarter with data-center revenue growth accelerating to 46% on AI demand (Pulse 2.0), while Workday said AI now drives more than 25% of new ACV and agent customers jumped more than 35% sequentially (Pulse 2.0). Together with Nvidia's $108B-quarter trajectory…",
+      "source": "",
+      "url": "",
+      "date": "2026-08-30"
     }
   ]
 }
